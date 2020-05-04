@@ -1,0 +1,30 @@
+---
+title: "TidyTuesday1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#Data Loading 
+
+library(tidyverse)
+library(lubridate)
+dogs <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-16/dogs.csv")
+
+```
+```{r}
+# ggplot
+
+
+dogs %>% 
+  ggplot() + aes (avg_neck, avg_weight, color = as.character(year)) + geom_point(size = 4, alpha = 0.8) + labs(x= "Average Neck", y= "Average Weight") + theme (legend.position = c(0.88,0.4)) + labs(title = "Comparison of average weight and neck size of dogs from 2007 to 2015")
+
+
+
+           
+
+
+```
