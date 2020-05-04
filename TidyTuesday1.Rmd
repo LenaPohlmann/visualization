@@ -20,7 +20,7 @@ dogs <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidyt
 
 
 dogs %>% 
-  ggplot() + aes (avg_neck, avg_weight, color = as.character(year)) + geom_point(size = 4, alpha = 0.8) + labs(x= "Average Neck", y= "Average Weight") + theme (legend.position = c(0.88,0.4)) + labs(title = "Comparison of average weight and neck size of dogs from 2007 to 2015")
+  ggplot() + aes (avg_neck, avg_weight, color = as.character(year)) + geom_point(size = 4, alpha = 0.8) + labs(x= "Average Neck", y= "Average Weight") + theme (legend.position = c(0.9,0.4)) + labs(title = "Comparison of average weight and neck size of dogs from 2007 to 2015") + scale_color_discrete(name = "Jahr")
 
 
 
