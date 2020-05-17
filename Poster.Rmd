@@ -33,8 +33,8 @@ selection %>%
   geom_col() + 
   facet_wrap(~Landkreis) +
   labs(x = "Meldedatum", y = "Anzahl gemeldeter Fälle",
-         title = "Vergleich der Neuinfektionen zwischen Aachen und Köln",
-         subtitle = "Beide Landkreise zeigen einen Rückgang der Infektionen.
+         title = "Vergleich der Neuinfektionen zwischen Berlin, Aachen und Köln",
+         subtitle = "Alle Landkreise zeigen einen Rückgang der Infektionen.
 Der Mindestabstand sollte jedoch weiterhin eingehalten werden, um einen erneuten Anstieg zu verhindern.",
          caption = paste("Daten vom RKI, Meldestand:", meldestand)) +
   scale_x_date(date_labels = "%d.%m.", date_breaks = "1 month") +
@@ -48,7 +48,7 @@ Der Mindestabstand sollte jedoch weiterhin eingehalten werden, um einen erneuten
     legend.background = element_rect(fill = "transparent"), # get rid of legend bg
     legend.box.background = element_rect(fill = "transparent"),# get rid of legend panel bg
     axis.title.x=element_blank(), #x-Achsen-Beschriftung entfernen
-    legend.position = c(0.14,0.73)
+    legend.position = c(0.14,0.74)
   )
 ggsave("plot.png", width = 7, height = 4, dpi = 600, bg = "transparent")
 
